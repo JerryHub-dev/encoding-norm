@@ -2,6 +2,6 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   themeConfig: {
-    name: 'encoding-norm',
+    name: '编码规范',
   },
 });

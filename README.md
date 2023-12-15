@@ -1,7 +1,5 @@
 # encoding-norm
 
-A static site base on [dumi](https://d.umijs.org).
-
 ## Development
 
 ```bash
