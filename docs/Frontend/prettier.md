@@ -253,3 +253,13 @@ npm i -D eslint-config-prettier
     ]
   },
 ```
+
+## 忽略文件
+
+> 在.prettierignore
+
+```
+node_modules
+.umi
+Public/Cesium/
+```

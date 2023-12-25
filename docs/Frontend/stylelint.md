@@ -68,3 +68,11 @@ module.exports = {
   ],
 };
 ```
+
+## 忽略文件
+
+> 在 .stylelintignore
+
+```
+Public/Cesium/
+```

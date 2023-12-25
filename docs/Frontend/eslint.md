@@ -27,6 +27,8 @@ order: 0
 
 [https://eslint.org/](https://eslint.org/)
 
+# ESLint 规则
+
 ```js
 // eslint built-in rules
   // 不需要返回就用 forEach
@@ -67,4 +69,10 @@ order: 0
   'use-isnan': 2,
 ```
 
+## 忽略文件
 
+> 在.eslintignore
+
+```
+Public/Cesium/
+```
