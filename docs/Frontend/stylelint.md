@@ -9,6 +9,32 @@ order: 1
 
 [https://stylelint.io/](https://stylelint.io/)
 
+stylelint 是一个用于检查 CSS 代码是否符合指定规范的工具，类似于 ESLint 用于 JavaScript 的代码检查。它可以帮助团队确保在项目中使用一致的 CSS 编码风格，提高代码质量和可维护性。以下是关于 stylelint 的一些重要信息：
+
+安装和配置： stylelint 可以通过 npm 安装，并且通常作为开发依赖项安装到项目中。配置文件通常以 .stylelintrc 或 stylelint.config.js 的形式存在，用于指定检查规则和配置项。
+
+bash
+Copy code
+npm install stylelint --save-dev
+规则和插件： stylelint 提供了大量的内置规则，用于检查 CSS 代码中的各种问题，如缩进、空格、命名规范等。你还可以使用插件来扩展 stylelint 的功能，以满足项目特定的需求。
+
+命令行工具： stylelint 可以通过命令行运行，对整个项目或指定文件进行代码检查。例如：
+
+bash
+Copy code
+npx stylelint "\*_/_.css"
+编辑器集成： 许多常用的代码编辑器（如 VSCode、Sublime Text、Atom 等）都提供了 stylelint 的插件，这样在编写代码时就可以即时获得 linting 提示。
+
+自定义规则： 除了使用内置规则外，你还可以根据项目的需求定义自己的规则。这有助于确保团队遵循项目特定的 CSS 编码规范。
+
+自动修复： stylelint 提供了一些规则自动修复的功能，可以通过运行 stylelint --fix 命令来尝试修复一些简单的问题，使得代码符合规范。
+
+社区支持： stylelint 拥有一个庞大的社区，因此你可以从社区中获取支持、学习最佳实践，并找到解决方案。
+
+集成到构建工具： stylelint 可以轻松集成到项目的构建工具中，例如 webpack、gulp 等，以便在构建过程中执行代码检查。
+
+总体而言，stylelint 是一个强大的工具，可以帮助开发团队保持一致的 CSS 代码风格，提高代码质量和可维护性。通过使用它，你可以在项目中轻松地实施和维护一致的 CSS 编码规范。
+
 ```ts
 /**
  * rules migrate from @umijs/fabric/dist/stylelint.js
