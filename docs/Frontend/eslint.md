@@ -5,7 +5,7 @@ group: ESLint
 order: 0
 ---
 
-# ESLint 介绍
+## ESLint 介绍
 
 > ESLint 是一个用于在 JavaScript 代码中识别和修复问题的工具。它是一个静态代码分析工具，能够检测代码中的潜在问题，并提供规范化的代码风格。ESLint 的主要目标是帮助开发者编写一致、清晰且易于维护的代码。
 
@@ -27,7 +27,7 @@ order: 0
 
 [https://eslint.org/](https://eslint.org/)
 
-# ESLint 规则
+## ESLint 规则
 
 ```js
 // eslint built-in rules
@@ -71,8 +71,11 @@ order: 0
 
 ## 忽略文件
 
-> 在.eslintignore 文件中，你可以指定要忽略的文件或文件夹。(推荐) / 也可以在 package.json 文件中配置
+- 在.eslintignore 文件中，你可以指定要忽略的文件或文件夹。(推荐)
+- 在 package.json 文件中配置
 
-```
+```bash
+# /.eslintignore
+
 Public/Cesium/
 ```

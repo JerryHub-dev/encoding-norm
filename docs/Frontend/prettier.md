@@ -256,9 +256,10 @@ npm i -D eslint-config-prettier
 
 ## 忽略文件
 
-> 在.prettierignore
+- 在 .prettierignore
 
-```
+```bash
+# 忽略文件 /.prettierignore
 node_modules
 .umi
 Public/Cesium/

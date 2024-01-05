@@ -5,11 +5,7 @@ group: Husky
 order: 0
 ---
 
-# 前言
-
-> n
-
-# Husky
+## 前言
 
 Husky 是一个流行的开源工具，用于简化和自动化 Git 钩子（hooks）的使用。Git 钩子是在特定重要动作发生时触发的脚本，如提交（commit）、推送（push）和接收（receive）等。Husky 使得在现代 Web 开发工作流程中配置和管理这些钩子变得更加容易。
 
