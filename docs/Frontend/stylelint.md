@@ -97,7 +97,7 @@ module.exports = {
 
 ## 忽略文件
 
-> 在 .stylelintignore(推荐) / 也可以在 package.json 中配置
+> 在 .stylelintignore 文件中，你可以指定要忽略的文件或目录。
 
 ```
 Public/Cesium/

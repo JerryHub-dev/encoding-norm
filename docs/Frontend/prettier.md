@@ -256,7 +256,7 @@ npm i -D eslint-config-prettier
 
 ## 忽略文件
 
-- 在 .prettierignore
+- 在 .prettierignore 中可以指定要忽略的文件或目录。
 
 ```bash
 # 忽略文件 /.prettierignore

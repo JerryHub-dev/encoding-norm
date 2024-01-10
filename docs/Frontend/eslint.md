@@ -73,8 +73,7 @@ order: 0
 
 ## 忽略文件
 
-- 在.eslintignore 文件中，你可以指定要忽略的文件或文件夹。(推荐)
-- 在 package.json 文件中配置
+- 在.eslintignore 文件中，你可以指定要忽略的文件或文件夹。
 
 ```bash
 # /.eslintignore
