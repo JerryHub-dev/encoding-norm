@@ -43,6 +43,9 @@ group:
 
 - ESLint：JavaScript 代码规范工具。
 - Prettier：代码格式化工具。
+- Stylelint：CSS 代码规范工具。
+- Commitlint：Git 提交规范工具。
+- Lint-staged：Git 钩子工具。
 - Husky：Git Hooks 工具。
 
 这些工具可以帮助开发人员自动检查和修复代码，使代码更加符合规范。
