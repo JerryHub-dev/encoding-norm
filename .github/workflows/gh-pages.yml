@@ -1,27 +1,35 @@
-name: github pages
+name: Deploy to GitHub Pages # 自定义工作流名称
 
-on:
-  push:
-    branches:
-      - master # default branch
+on: # 触发条件
+  push: # 当推送时触发
+    branches: # 推送到哪些分支时触发
+      - master  # 当推送到 master 分支时，触发 deploy 构建
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          # 如果配置 themeConfig.lastUpdated 为 false，则不需要添加该参数以加快检出速度
-          fetch-depth: 0
-      - name: Install dependencies
-        run: npm install
-      - name: Build with dumi
-        # 文档编译命令，如果是 react 模板需要修改为 npm run docs:build
-        run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 文档目录，如果是 react 模板需要修改为 docs-dist
-          publish_dir: ./dist
+jobs: # 一个工作流可以包含多个 job
+  build-and-deploy: # 自定义 job 名称
+    runs-on: ubuntu-latest # 运行环境
+
+    steps: # job 包含的步骤
+      - name: Checkout code # 步骤名称
+        uses: actions/checkout@v4 # 使用的 action
+
+      - name: Setup Node.js # 安装 Node.js
+        uses: actions/setup-node@v4 # 使用的 action
+        with: # action 参数
+          node-version: '20' # 设置 Node.js 版本
+
+      - name: Install pnpm # 安装依赖
+        run: npm install -g pnpm # 执行命令
+
+      - name: Install dependencies # 安装依赖
+        run: pnpm install # 执行命令
+
+      - name: Build project # 构建项目
+        run: pnpm build # 执行命令
+
+      - name: Deploy to GitHub Pages # 部署到 GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4 # 使用的 action
+        with: # action 参数
+          ACCESS_TOKEN: ${{ secrets.ENCODEING_NORM_TOKEN }} # GitHub Token
+          BRANCH: gh-pages # 部署到的分支
+          FOLDER: dist # 部署的文件夹
