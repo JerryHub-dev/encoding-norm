@@ -25,11 +25,11 @@ jobs: # 一个工作流可以包含多个 job
         run: pnpm install # 执行命令
 
       - name: Build project # 构建项目
-        run: pnpm build # 执行命令
+        run: pnpm build:github # 执行命令
 
       - name: Deploy to GitHub Pages # 部署到 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4 # 使用的 action
         with: # action 参数
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub Token
-          BRANCH: gh-pages # 部署到的分支
-          FOLDER: dist # 部署的文件夹
+          token: ${{ secrets.ACCESS_TOKEN }} # 设置 access token
+          branch: gh-pages # 部署到的分支
+          folder: dist # 部署的文件夹
