@@ -4,6 +4,9 @@ on: # 触发条件
   push: # 当推送时触发
     branches: # 推送到哪些分支时触发
       - master  # 当推送到 master 分支时，触发 deploy 构建
+  pull_request: # 当 PR 时触发
+    branches: # PR 到哪些分支时触发
+      - master # 当 PR 到 master 分支时，触发 deploy 构建
 
 jobs: # 一个工作流可以包含多个 job
   build-and-deploy: # 自定义 job 名称
@@ -30,6 +33,6 @@ jobs: # 一个工作流可以包含多个 job
       - name: Deploy to GitHub Pages # 部署到 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4 # 使用的 action
         with: # action 参数
-          token: ${{ secrets.ACCESS_TOKEN }} # 设置 access token
-          branch: gh-pages # 部署到的分支
-          folder: dist # 部署的文件夹
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub Token
+          BRANCH: gh-pages # 部署到的分支
+          FOLDER: dist # 部署的文件夹
